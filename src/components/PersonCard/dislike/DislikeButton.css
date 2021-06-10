@@ -1,0 +1,9 @@
+.dislike .selected.green {
+    background: linear-gradient(#80a48e, #8bb49e);
+    border-radius: 12%;
+}
+
+.dislike .selected {
+    background: linear-gradient(#c36257, #d26c64);
+    border-radius: 12%;
+}

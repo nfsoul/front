@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+.person-body {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+@media (min-width: 676px) {
+    .person-body-sm {
+        flex: 0 0 100% ;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .person-body-md {
+        flex: 0 0 50% ;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 1680px) {
+    .person-body-lg {
+        flex: 0 0 33.333333% ;
+        max-width: 33.333333%;
+    }
+}
+
+
+.person-user-card svg {
+    width: 120px;
+    height: 120px;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.person-card {
+    width: 450px;
+    height: 250px;
+    background-color: #fff;
+    background: linear-gradient(#f8f8f8, #fff);
+    box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    margin: 1.5rem;
+}
+
+.person-card h1 {
+    text-align: center;
+}
+
+.person-card .additional {
+    position: absolute;
+    width: 150px;
+    height: 100%;
+    background: linear-gradient(#dE685E, #EE786E);
+    transition: width 0.4s;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.person-card.green .additional {
+    background: linear-gradient(#92bCa6, #A2CCB6);
+}
+
+
+.person-card:hover .additional {
+    width: 100%;
+    border-radius: 0 5px 5px 0;
+}
+
+/*.person-card .additional {
+    width: 100%;
+    border-radius: 0 5px 5px 0;
+}*/
+
+.person-card .additional .person-user-card {
+    width: 150px;
+    height: 100%;
+    position: relative;
+    float: left;
+}
+
+.person-card .additional .person-user-card::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10%;
+    right: -2px;
+    height: 80%;
+    border-left: 2px solid rgba(0,0,0,0.025);
+}
+
+.person-card .additional .person-user-card .level,
+.person-card .additional .person-user-card .points {
+    top: 15%;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.75em;
+    font-weight: bold;
+    background: rgba(0,0,0,0.15);
+    padding: 0.125rem 0.75rem;
+    border-radius: 100px;
+    white-space: nowrap;
+}
+
+.person-card .additional .person-user-card .points {
+    top: 85%;
+}
+
+.person-card .additional .person-user-card svg {
+    top: 50%;
+}
+
+.person-card .additional .more-info {
+    width: 300px;
+    float: left;
+    position: absolute;
+    left: 150px;
+    height: 100%;
+}
+
+.person-card .general h1 {
+    padding-bottom: 0.25rem;
+    padding-top: 0.25rem;
+    font-size: 2rem !important;
+}
+
+.person-card.green .general h1 {
+    padding-bottom: 0.25rem;
+    padding-top: 0.25rem;
+    font-size: 2rem !important;
+}
+
+.person-card .additional .more-info h1 {
+    color: #fff;
+    margin-bottom: 0;
+    padding-bottom: 0.25rem;
+    padding-top: 0.25rem;
+    font-size: 2rem !important;
+}
+
+.person-card.green .additional .more-info h1 {
+    color: #224C36;
+    padding-bottom: 0.25rem;
+    padding-top: 0.25rem;
+    font-size: 2rem !important;
+}
+
+.person-card .additional .coords {
+    margin: 0 1rem;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.person-card.green .additional .coords {
+    color: #325C46;
+}
+
+.person-card .additional .coords span + span {
+    float: right;
+}
+
+.person-card .additional .social {
+    font-size: 2rem;
+    display: flex;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    background: inherit;
+    top: auto;
+    color: #fff;
+}
+
+.person-card.green .additional .social {
+    color: #325C46;
+}
+
+.person-card .additional .social > div {
+    flex: 1;
+    text-align: center;
+}
+
+.person-card .additional .social i {
+    display: block;
+}
+
+.person-card .additional .social div.title {
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.person-card .additional .social div.value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+}
+
+.person-card .additional .social div.value.infinity {
+    font-size: 2.5rem;
+}
+
+.person-card .general {
+    width: 300px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 1rem;
+    padding-top: 0;
+}
+
+.person-card .general .more {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 0.9em;
+}
+
+.like .selected.green {
+    background: linear-gradient(#80a48e, #8bb49e);
+    border-radius: 12%;
+}
+
+.like .selected {
+    background: linear-gradient(#c36257, #d26c64);
+    border-radius: 12%;
+}
+
+

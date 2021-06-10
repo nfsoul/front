@@ -1,0 +1,423 @@
+{
+  "contractName": "ISoulMarket",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.4+commit.c7e474f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/home/ilyadruzh/Documents/nfsoul/sc/contracts/interfaces/ISoulMarket.sol\":\"ISoulMarket\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":9},\"remappings\":[]},\"sources\":{\"/home/ilyadruzh/Documents/nfsoul/sc/contracts/interfaces/ISoulMarket.sol\":{\"keccak256\":\"0x2ddff5c789b1cca6e3f29130ffcf1098fd449c359a2f46d7eafdb7e1d23bcf40\",\"license\":\"GPL-3.0\",\"urls\":[\"bzz-raw://b4f6aa81a776a57dbc00d5ebec7c524cb03ccf80ea599441808d04cbb8525ff4\",\"dweb:/ipfs/QmWcL8Xv6cbtGjmUuzCZcnaYd5hzuJEgZZ8UM8CXeJtohR\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: GPL-3.0\npragma solidity >=0.6.2 <0.9.0;\n\ninterface ISoulMarket {\n    struct Sale {\n        uint256 startedAt;\n        address seller;\n        address buyer;\n        uint256 price;\n        bool onSale;\n    }\n}\n",
+  "sourcePath": "/home/ilyadruzh/Documents/nfsoul/sc/contracts/interfaces/ISoulMarket.sol",
+  "ast": {
+    "absolutePath": "/home/ilyadruzh/Documents/nfsoul/sc/contracts/interfaces/ISoulMarket.sol",
+    "exportedSymbols": {
+      "ISoulMarket": [
+        1955
+      ]
+    },
+    "id": 1956,
+    "license": "GPL-3.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1943,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".2",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "36:31:8"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": true,
+        "id": 1955,
+        "linearizedBaseContracts": [
+          1955
+        ],
+        "name": "ISoulMarket",
+        "nameLocation": "79:11:8",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "ISoulMarket.Sale",
+            "id": 1954,
+            "members": [
+              {
+                "constant": false,
+                "id": 1945,
+                "mutability": "mutable",
+                "name": "startedAt",
+                "nameLocation": "127:9:8",
+                "nodeType": "VariableDeclaration",
+                "scope": 1954,
+                "src": "119:17:8",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1944,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "119:7:8",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1947,
+                "mutability": "mutable",
+                "name": "seller",
+                "nameLocation": "154:6:8",
+                "nodeType": "VariableDeclaration",
+                "scope": 1954,
+                "src": "146:14:8",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1946,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "146:7:8",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1949,
+                "mutability": "mutable",
+                "name": "buyer",
+                "nameLocation": "178:5:8",
+                "nodeType": "VariableDeclaration",
+                "scope": 1954,
+                "src": "170:13:8",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1948,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "170:7:8",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1951,
+                "mutability": "mutable",
+                "name": "price",
+                "nameLocation": "201:5:8",
+                "nodeType": "VariableDeclaration",
+                "scope": 1954,
+                "src": "193:13:8",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1950,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "193:7:8",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1953,
+                "mutability": "mutable",
+                "name": "onSale",
+                "nameLocation": "221:6:8",
+                "nodeType": "VariableDeclaration",
+                "scope": 1954,
+                "src": "216:11:8",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 1952,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "216:4:8",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Sale",
+            "nameLocation": "104:4:8",
+            "nodeType": "StructDefinition",
+            "scope": 1955,
+            "src": "97:137:8",
+            "visibility": "public"
+          }
+        ],
+        "scope": 1956,
+        "src": "69:167:8",
+        "usedErrors": []
+      }
+    ],
+    "src": "36:201:8"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/ilyadruzh/Documents/nfsoul/sc/contracts/interfaces/ISoulMarket.sol",
+    "exportedSymbols": {
+      "ISoulMarket": [
+        1955
+      ]
+    },
+    "id": 1956,
+    "license": "GPL-3.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1943,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".2",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "36:31:8"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": true,
+        "id": 1955,
+        "linearizedBaseContracts": [
+          1955
+        ],
+        "name": "ISoulMarket",
+        "nameLocation": "79:11:8",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "ISoulMarket.Sale",
+            "id": 1954,
+            "members": [
+              {
+                "constant": false,
+                "id": 1945,
+                "mutability": "mutable",
+                "name": "startedAt",
+                "nameLocation": "127:9:8",
+                "nodeType": "VariableDeclaration",
+                "scope": 1954,
+                "src": "119:17:8",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1944,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "119:7:8",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1947,
+                "mutability": "mutable",
+                "name": "seller",
+                "nameLocation": "154:6:8",
+                "nodeType": "VariableDeclaration",
+                "scope": 1954,
+                "src": "146:14:8",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1946,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "146:7:8",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1949,
+                "mutability": "mutable",
+                "name": "buyer",
+                "nameLocation": "178:5:8",
+                "nodeType": "VariableDeclaration",
+                "scope": 1954,
+                "src": "170:13:8",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1948,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "170:7:8",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1951,
+                "mutability": "mutable",
+                "name": "price",
+                "nameLocation": "201:5:8",
+                "nodeType": "VariableDeclaration",
+                "scope": 1954,
+                "src": "193:13:8",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1950,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "193:7:8",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1953,
+                "mutability": "mutable",
+                "name": "onSale",
+                "nameLocation": "221:6:8",
+                "nodeType": "VariableDeclaration",
+                "scope": 1954,
+                "src": "216:11:8",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 1952,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "216:4:8",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Sale",
+            "nameLocation": "104:4:8",
+            "nodeType": "StructDefinition",
+            "scope": 1955,
+            "src": "97:137:8",
+            "visibility": "public"
+          }
+        ],
+        "scope": 1956,
+        "src": "69:167:8",
+        "usedErrors": []
+      }
+    ],
+    "src": "36:201:8"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.4+commit.c7e474f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.1",
+  "updatedAt": "2021-05-28T14:07:34.901Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

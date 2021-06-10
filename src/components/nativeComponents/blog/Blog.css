@@ -1,0 +1,9 @@
+.blog {
+    background-color: #f7f7f7;
+    height: 100%;
+}
+
+.blog-container{
+    background-color: #FFFFFF;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.1);
+}
