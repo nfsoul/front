@@ -1,0 +1,293 @@
+{
+  "contractName": "FeeManage",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.4+commit.c7e474f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/home/ilyadruzh/Documents/nfsoul/smart-contracts/contracts/FeeManage.sol\":\"FeeManage\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":9},\"remappings\":[]},\"sources\":{\"/home/ilyadruzh/Documents/nfsoul/smart-contracts/contracts/FeeManage.sol\":{\"keccak256\":\"0x6e618c92db4513c2fd922ab9bbfa7ee370a0ae02c4d196226a9ce9a91900f440\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://76c1caa11d63d518ffe8e836fac5dfb1a3cfb5d381fb67c91240b725f4765787\",\"dweb:/ipfs/QmT9iHuJZDvCU1UEUDC896z6TyeU2bqNK7jEsKjzi3amPz\"]}},\"version\":1}",
+  "bytecode": "0x60806040526207a120600055600180546001600160a01b03191673c6c6e7edab89a39ffc9db19cdd46c5c639964daa179055348015603c57600080fd5b50603f80604a6000396000f3fe6080604052600080fdfea264697066735822122082bce49610e215946011b0b7306b8a0d4b8b735969783384c41537d27affab8264736f6c63430008040033",
+  "deployedBytecode": "0x6080604052600080fdfea264697066735822122082bce49610e215946011b0b7306b8a0d4b8b735969783384c41537d27affab8264736f6c63430008040033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "65:122:1:-:0;;;109:6;91:24;;121:63;;;-1:-1:-1;;;;;;121:63:1;142:42;121:63;;;65:122;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "65:122:1:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: UNLICENSED\n\npragma solidity ^0.8.0;\n\ncontract FeeManage {\n\n    uint256 emitFee = 500000;\n    address cryptoTart = 0xc6C6e7eDaB89a39fFc9dB19cdD46c5C639964DAa;\n}\n",
+  "sourcePath": "/home/ilyadruzh/Documents/nfsoul/smart-contracts/contracts/FeeManage.sol",
+  "ast": {
+    "absolutePath": "/home/ilyadruzh/Documents/nfsoul/smart-contracts/contracts/FeeManage.sol",
+    "exportedSymbols": {
+      "FeeManage": [
+        116
+      ]
+    },
+    "id": 117,
+    "license": "UNLICENSED",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 109,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "40:23:1"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 116,
+        "linearizedBaseContracts": [
+          116
+        ],
+        "name": "FeeManage",
+        "nameLocation": "74:9:1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 112,
+            "mutability": "mutable",
+            "name": "emitFee",
+            "nameLocation": "99:7:1",
+            "nodeType": "VariableDeclaration",
+            "scope": 116,
+            "src": "91:24:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 110,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "91:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "hexValue": "353030303030",
+              "id": 111,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "109:6:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_500000_by_1",
+                "typeString": "int_const 500000"
+              },
+              "value": "500000"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 115,
+            "mutability": "mutable",
+            "name": "cryptoTart",
+            "nameLocation": "129:10:1",
+            "nodeType": "VariableDeclaration",
+            "scope": 116,
+            "src": "121:63:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 113,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "121:7:1",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307863364336653765446142383961333966466339644231396364443436633543363339393634444161",
+              "id": 114,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "142:42:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0xc6C6e7eDaB89a39fFc9dB19cdD46c5C639964DAa"
+            },
+            "visibility": "internal"
+          }
+        ],
+        "scope": 117,
+        "src": "65:122:1",
+        "usedErrors": []
+      }
+    ],
+    "src": "40:148:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/ilyadruzh/Documents/nfsoul/smart-contracts/contracts/FeeManage.sol",
+    "exportedSymbols": {
+      "FeeManage": [
+        116
+      ]
+    },
+    "id": 117,
+    "license": "UNLICENSED",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 109,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "40:23:1"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 116,
+        "linearizedBaseContracts": [
+          116
+        ],
+        "name": "FeeManage",
+        "nameLocation": "74:9:1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 112,
+            "mutability": "mutable",
+            "name": "emitFee",
+            "nameLocation": "99:7:1",
+            "nodeType": "VariableDeclaration",
+            "scope": 116,
+            "src": "91:24:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 110,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "91:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "hexValue": "353030303030",
+              "id": 111,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "109:6:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_500000_by_1",
+                "typeString": "int_const 500000"
+              },
+              "value": "500000"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 115,
+            "mutability": "mutable",
+            "name": "cryptoTart",
+            "nameLocation": "129:10:1",
+            "nodeType": "VariableDeclaration",
+            "scope": 116,
+            "src": "121:63:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 113,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "121:7:1",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307863364336653765446142383961333966466339644231396364443436633543363339393634444161",
+              "id": 114,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "142:42:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0xc6C6e7eDaB89a39fFc9dB19cdD46c5C639964DAa"
+            },
+            "visibility": "internal"
+          }
+        ],
+        "scope": 117,
+        "src": "65:122:1",
+        "usedErrors": []
+      }
+    ],
+    "src": "40:148:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.4+commit.c7e474f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.1",
+  "updatedAt": "2021-06-11T22:29:58.415Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
