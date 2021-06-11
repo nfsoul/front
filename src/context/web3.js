@@ -128,7 +128,7 @@ class Web3Provider extends Component {
 
     getContractInstance = async web3 => {
 
-        const NFSoul = new web3.eth.Contract(nfsoulContract.abi, nfsoulContract.networks['5777'].address)
+        const NFSoul = new web3.eth.Contract(nfsoulContract.abi, nfsoulContract.networks['3'].address)
         await this.setState((state, props) => ({
             nfsContract: NFSoul,
         }, () => console.log));
@@ -137,7 +137,7 @@ class Web3Provider extends Component {
     getAllSouls = async () => {
 
         console.log("getAllSouls")
-        const NFSoul = new this.state.web3.eth.Contract(nfsoulContract.abi, nfsoulContract.networks['5777'].address)
+        const NFSoul = new this.state.web3.eth.Contract(nfsoulContract.abi, nfsoulContract.networks['3'].address)
 
         let souls = [];
 
@@ -158,7 +158,7 @@ class Web3Provider extends Component {
     getSoul = async account => {
 
         console.log("account getSoul:", account)
-        const NFSoul = new this.state.web3.eth.Contract(nfsoulContract.abi, nfsoulContract.networks['5777'].address)
+        const NFSoul = new this.state.web3.eth.Contract(nfsoulContract.abi, nfsoulContract.networks['3'].address)
         await NFSoul.methods
             .getSoul(account)
             .call()
@@ -269,7 +269,7 @@ class Web3Provider extends Component {
     };
 
     getSoulBySoulID = async soulId => {
-        const NFSoul = new this.state.web3.eth.Contract(nfsoulContract.abi, nfsoulContract.networks['5777'].address)
+        const NFSoul = new this.state.web3.eth.Contract(nfsoulContract.abi, nfsoulContract.networks['3'].address)
 
         let carrier, owner, donorMods, soulMods, marketInfo, auctionInfo;
 
@@ -346,9 +346,7 @@ class Web3Provider extends Component {
     };
 
     emitSoul = (account, soulId) => {
-        console.log("emit for: ", account);
-
-        const NFSoul = new this.state.web3.eth.Contract(nfsoulContract.abi, nfsoulContract.networks['5777'].address)
+        const NFSoul = new this.state.web3.eth.Contract(nfsoulContract.abi, nfsoulContract.networks['3'].address)
 
         NFSoul.methods
             .mint(soulId).send({
