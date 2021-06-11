@@ -93,7 +93,7 @@ class HeaderSide extends Component {
                                 </Row>}
                             // className="site-page-header"
                             subTitle="want to be rich and famous?"
-                            tags={<Tag color="blue">v.0.1</Tag>}
+                            tags={<Tag color="blue">v.0.2.1 (Ropsten)</Tag>}
                             extra={[button]}
                         />
 

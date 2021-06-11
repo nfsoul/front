@@ -71,7 +71,7 @@ class SoulPage extends Component {
         const Web3 = this.props.state.web3;
         let soulId, carrier, owner, donorMods, soulMods, marketInfo, auctionInfo;
 
-        const NFSoul = new Web3.eth.Contract(nfsoulContract.abi, nfsoulContract.networks['5777'].address);
+        const NFSoul = new Web3.eth.Contract(nfsoulContract.abi, nfsoulContract.networks['3'].address);
 
         await NFSoul.methods
             .getSoul(account)
