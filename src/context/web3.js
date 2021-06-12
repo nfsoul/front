@@ -7,7 +7,7 @@ import nfsoulContract from '../contracts/NFSoul.json'
 const DEFAULT_STATE = {
     web3network: "",
     web3networkName: "",
-    web3connected: false, // check web3
+    web3connected: false,
     isMetaMaskConnected: false,
     isMetaMaskLocked: true,
     nfsAddress: '',
@@ -31,6 +31,7 @@ class Web3Provider extends Component {
             nfsAddress: '',
             nfsContract: [],
             pieAddress: '',
+            metamaskInstalled: false,
             ethereum: window.ethereum,
             provider: "",
             web3: new Web3(window['ethereum']),
@@ -58,23 +59,39 @@ class Web3Provider extends Component {
 
     componentDidMount() {
 
-        console.log("window['ethereum'].selectedAddress: ", window['ethereum'].selectedAddress)
-
         if (typeof window['ethereum'] !== 'undefined') {
             // Supports EIP-1102 injected Ethereum providers.
             this.setState((state, props) => ({
                 provider: window['ethereum'],
+                metamaskInstalled: true,
             }, () => console.log(this.state.provider)));
         } else if (typeof window.web3 !== 'undefined') {
             // Supports legacy injected Ethereum providers.
             this.setState((state, props) => ({
                 provider: window.web3.currentProvider,
+                metamaskInstalled: true,
             }, () => console.log(this.state.provider)));
         } else {
             // Your preferred fallback.
+            console.log("metamask not installed: ", window.web3)
             this.setState((state, props) => ({
-                provider: window.web3.providers.HttpProvider('http://localhost:8545'),
+                // provider: window.web3.providers.HttpProvider('http://localhost:8545'),
+                metamaskInstalled: false
             }, () => console.log(this.state.provider)));
+        }
+
+        if (this.state.metamaskInstalled) {
+            console.log("is metamask installed: ", this.state.metamaskInstalled)
+
+            const web3 = new Web3(window['ethereum']); //new Web3(this.state.provider);
+
+            this.getContractInstance(web3);
+
+            this.state.ethereum.enable();
+            this.state.ethereum.on('chainChanged', (e) => this.setNetwork(e))
+            this.state.ethereum.on('accountsChanged', (e) => this.accountsChanged(e))
+            window.localStorage.setItem("eth_address", this.state.ethereum.selectedAddress);
+            window.localStorage.setItem('web3connected', true);
         }
 
         // this.setState({
@@ -114,16 +131,6 @@ class Web3Provider extends Component {
         //     }
         //   });
         // }
-
-        const web3 = new Web3(window['ethereum']); //new Web3(this.state.provider);
-
-        this.getContractInstance(web3);
-
-        this.state.ethereum.enable();
-        this.state.ethereum.on('chainChanged', (e) => this.setNetwork(e))
-        this.state.ethereum.on('accountsChanged', (e) => this.accountsChanged(e))
-        window.localStorage.setItem("eth_address", this.state.ethereum.selectedAddress);
-        window.localStorage.setItem('web3connected', true);
     }
 
     getContractInstance = async web3 => {
@@ -156,8 +163,6 @@ class Web3Provider extends Component {
     }
 
     getSoul = async account => {
-
-        console.log("account getSoul:", account)
         const NFSoul = new this.state.web3.eth.Contract(nfsoulContract.abi, nfsoulContract.networks['3'].address)
         await NFSoul.methods
             .getSoul(account)
@@ -453,8 +458,7 @@ class Web3Provider extends Component {
                 }
             } > {
                 this.props.children
-            } <
-            /Web3Context.Provider>
+            } < /Web3Context.Provider>
         );
     }
 }

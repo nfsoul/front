@@ -4,6 +4,7 @@ import * as Context from "../context";
 const web3hoc = WrappedComponent => class extends React.Component {
 
     render() {
+        
         return (
             <Context.Web3.Consumer>
                 {

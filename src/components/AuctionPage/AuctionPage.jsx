@@ -199,7 +199,9 @@ class AuctionPage extends Component {
   }
 
   componentDidMount() {
-    this.props.getAllSouls()
+    if (this.props.state.web3connected === "true") {
+      this.props.getAllSouls()
+    }
   }
 
   fetch = (params = {}) => {

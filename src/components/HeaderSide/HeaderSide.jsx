@@ -9,7 +9,6 @@ import web3hoc from '../../hoc/web3hoc';
 
 const { Header, Content } = Layout;
 
-
 const button = (
 
     <>
@@ -18,12 +17,13 @@ const button = (
                 {
 
                     Web3 => (
-                        console.log("Web3 HEADER: ", Web3),
-                        Web3.account != null
-                            ? <Link to={"/soul/" + Web3.account}>{Web3.account.substring(0, 10)}...</Link>
-                            : (window.ethereum.selectedAddress != null)
-                                ? <Link to={"/soul/" + window.ethereum.selectedAddress}>{window.ethereum.selectedAddress.substring(0, 10)}...</Link>
-                                : (<Button key="1" type="primary" onClick={join}>Join</Button>)
+                        Web3.state.web3connected === "true" ?
+                            (Web3.account != null
+                                ? <Link to={"/soul/" + Web3.account}>{Web3.account.substring(0, 10)}...</Link>
+                                : (window.ethereum.selectedAddress != null)
+                                    ? <Link to={"/soul/" + window.ethereum.selectedAddress}>{window.ethereum.selectedAddress.substring(0, 10)}...</Link>
+                                    : (<Button key="1" type="primary" onClick={join}>Join</Button>))
+                            : <Link to="/#">Install metamask</Link>
                     )
                 }
             </Context.Web3.Consumer>
@@ -66,7 +66,6 @@ class HeaderSide extends Component {
 
                         {
                             Web3 => (
-                                console.log("HEADER Web3: ", Web3),
                                 Web3.account != null
                                     ? <Link to={"/soul/" + Web3.account}>{Web3.account.substring(0, 10)}... </Link>
                                     : (<Button key="1" type="primary" onClick={join}>Join</Button>)
@@ -78,8 +77,6 @@ class HeaderSide extends Component {
         )
     }
 
-    // style={{ backgroundColor: 'f0f2f5' }}
-    
     render() {
         return (
             <Header >
